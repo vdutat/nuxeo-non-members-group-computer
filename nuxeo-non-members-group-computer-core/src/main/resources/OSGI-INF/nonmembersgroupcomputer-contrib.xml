@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<component name="com.acme.platform.computedgroups.nonmembersgroupcomputer">
+
+  <extension point="computer" target="org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl">
+  
+    <groupComputer name="nonMembersGroupComputer">
+      <computer>com.acme.platform.computedgroups.NonMembersGroupComputer</computer>
+    </groupComputer>
+
+  </extension>
+
+  <extension point="computerChain" target="org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl">
+
+    <groupComputerChain append="true">
+      <computers>
+        <computer>nonMembersGroupComputer</computer>
+      </computers>
+    </groupComputerChain>
+
+  </extension>
+
+</component>
